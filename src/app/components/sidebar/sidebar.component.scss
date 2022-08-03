@@ -1,0 +1,57 @@
+@import '../../shared/variables';
+.sidebar {
+    width: 8rem;
+    height: max-content;
+    position: fixed;
+    top: 35%;
+    right: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    .social-container {
+        width: 100%;
+        height: max-content;
+    }
+    .social__item {
+        width: 100%;
+        height: 7rem;
+        background-color: $color-light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgb(221, 216, 216);
+        cursor: pointer;
+    }
+    .social__item:first-of-type {
+        border-top-left-radius: 10px;
+    }
+    .social__item:last-of-type {
+        border-bottom-left-radius: 10px;
+    }
+    .social__icon {
+        color: $color-dark;
+    }
+    .social__item:hover .social__icon {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+    
+    @keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+    }
+}
